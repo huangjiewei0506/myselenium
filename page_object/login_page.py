@@ -1,6 +1,8 @@
 """
 loginpage类
 """
+import time
+
 from selenium.webdriver.common.by import By
 
 from base.base_page import BasePage
@@ -29,6 +31,7 @@ if __name__ == '__main__':
     password='LTXWJwyyjk123'
     lp=LoginPage(driver)
     lp.login(username,password)
+    time.sleep(3)
     driver.quit()
 
 
