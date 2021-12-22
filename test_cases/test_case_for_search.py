@@ -4,7 +4,7 @@ from selenium import webdriver
 
 from page_object.index_page import IndexPage
 from page_object.login_page import LoginPage
-from ddt import ddt,file_data,data,unpack
+from ddt import ddt,file_data,data
 
 @ddt
 class TestCase(unittest.TestCase):
