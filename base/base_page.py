@@ -2,6 +2,8 @@ from time import sleep
 
 from selenium import webdriver
 import selenium
+from selenium.webdriver import Keys
+
 
 class BasePage:
 
@@ -24,3 +26,5 @@ class BasePage:
 
     def wait(self,time_):
         sleep(time_)
+
+
