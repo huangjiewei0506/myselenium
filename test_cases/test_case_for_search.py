@@ -4,7 +4,7 @@ from selenium import webdriver
 
 from page_object.index_page import IndexPage
 from page_object.login_page import LoginPage
-from ddt import ddt,file_data
+from ddt import ddt,file_data,data,unpack
 
 @ddt
 class TestCase(unittest.TestCase):
@@ -20,15 +20,14 @@ class TestCase(unittest.TestCase):
 
     @file_data('../data/user.yaml')
     def test_1_login(self,username,password):
-
-
         #测试流程
         self.lp.login(username, password)
         time.sleep(2)
 
-    def test_2_search(self):
+
+    @data('123','456','789')
+    def test_2_search(self,txt):
         # 测试数据
-        txt = '456'
 
         # 测试流程
         self.ip.search(txt)
