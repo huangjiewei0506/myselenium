@@ -25,16 +25,5 @@ class LoginPage(BasePage):
 
 
 
-if __name__ == '__main__':
-    driver=webdriver.Chrome('/Users/huangjiewei/Documents/chromedriver')
-    username='756898445@qq.com'
-    password='LTXWJwyyjk123'
-    lp=LoginPage(driver)
-    lp.login(username,password)
-    time.sleep(3)
-    driver.quit()
 
 
-"""
-提交到master分支
-"""
