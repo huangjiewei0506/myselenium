@@ -10,7 +10,8 @@ from ddt import ddt,file_data,data
 class TestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.driver=webdriver.Chrome('/Users/huangjiewei/Documents/chromedriver')
+       # '/Users/huangjiewei/Documents/chromedriver'
+        cls.driver=webdriver.Chrome()
         cls.lp=LoginPage(cls.driver)
         cls.ip=IndexPage(cls.driver)
 
@@ -25,7 +26,7 @@ class TestCase(unittest.TestCase):
         time.sleep(2)
 
 
-    @data('123','456','789')
+    @data('123')
     def test_2_search(self,txt):
         # 测试数据
 
